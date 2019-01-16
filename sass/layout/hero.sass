@@ -17,7 +17,7 @@
     &.is-#{$name}
       background-color: $color
       color: $color-invert
-      a:not(.button),
+      a:not(.button):not(.dropdown-item):not(.tag),
       strong
         color: inherit
       .title
@@ -97,7 +97,8 @@
         padding-bottom: 18rem
         padding-top: 18rem
   &.is-halfheight,
-  &.is-fullheight
+  &.is-fullheight,
+  &.is-fullheight-with-navbar
     .hero-body
       align-items: center
       display: flex
@@ -112,7 +113,7 @@
 // Components
 
 .hero-video
-  +overlay
+  @extend %overlay
   overflow: hidden
   video
     left: 50%
